@@ -6,3 +6,5 @@ Task
 
 2. Connect a MySQL/Postgres database to a Spring Boot  application using the MySQL JDBC driver, and create CRUD operations (read, write, update, delete) 
  for a DB table through a REST API in the controller layer? point -- 1
+  table name :: Employee
+  column: -  empId(PrimaryKey) , EmpName, Age, Gender,Phone, Address, email
