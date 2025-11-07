@@ -3,3 +3,6 @@ Task
  +,-,/ and * and also remember to throw the exception what the output is undefined and use loggers to log the result and the input passed.
 
  input - a = num, b= num, and operation = character
+
+2. Connect a MySQL/Postgres database to a Spring Boot  application using the MySQL JDBC driver, and create CRUD operations (read, write, update, delete) 
+ for a DB table through a REST API in the controller layer? point -- 1
