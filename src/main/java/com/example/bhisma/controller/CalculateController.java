@@ -1,6 +1,7 @@
-package com.example.bhisma.Controller;
+package com.example.bhisma.controller;
 
-import com.example.bhisma.BhismaService.CService;
+
+import com.example.bhisma.bhishmaservice.CalculateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,12 +13,12 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/v1")
-public class CController {
+public class CalculateController {
 
-    private static final Logger logger = LoggerFactory.getLogger(CController.class);
+    private static final Logger logger = LoggerFactory.getLogger(CalculateController.class);
 
     @Autowired
-    private CService cService;
+    private CalculateService calculateService;
 
     @GetMapping("/calculate")
     public ResponseEntity<?> calculate(
@@ -28,7 +29,7 @@ public class CController {
         logger.info("Received request - a: {}, b: {}, operation: {}", a, b, operation);
 
         try {
-            double result = cService.calculate(a, b, operation);
+            double result = calculateService.calculate(a, b, operation);
             logger.info("Calculation successful - Result: {}", result);
 
             return ResponseEntity.ok(new CalculatorResponse(
@@ -50,32 +51,17 @@ public class CController {
                 request.getA(), request.getB(), request.getOperation());
 
         try {
-            double result = cService.calculate(
-                    request.getA(),
-                    request.getB(),
-                    request.getOperation()
-            );
+            double result = calculateService.calculate(request.getA(), request.getB(), request.getOperation());
 
             logger.info("Calculation successful - Result: {}", result);
 
-            return ResponseEntity.ok(new CalculatorResponse(
-                    request.getA(),
-                    request.getB(),
-                    request.getOperation(),
-                    result,
-                    "Success"
-            ));
+            return ResponseEntity.ok(new CalculatorResponse(request.getA(), request.getB(), request.getOperation(), result, "Success"));
 
         } catch (InvalidOperationException e) {
             logger.error("Error occurred - {}", e.getMessage());
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
-                    .body(new ErrorResponse(
-                            e.getMessage(),
-                            request.getA(),
-                            request.getB(),
-                            request.getOperation()
-                    ));
+                    .body(new ErrorResponse(e.getMessage(), request.getA(), request.getB(), request.getOperation()));
         }
     }
 
