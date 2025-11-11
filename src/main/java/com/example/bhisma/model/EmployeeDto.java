@@ -1,51 +1,24 @@
-package com.example.bhisma.entity;
+package com.example.bhisma.model;
 
-import jakarta.persistence.*;
-
-/*@NoArgsConstructor
-@AllArgsConstructor
-@Data*/
-@Entity
-@Table(name = "employee")
-//@ToString
-public class Employee {
-
-    @Id
-    //@GeneratedValue(strategy = GenerationType.SEQUENCE)
+public class EmployeeDto {
     private Integer id;
     private String firstName;
     private String lastName;
     private Integer age;
     private String designation;
     private String phoneNumber;
-   /* @Version
-    private Integer version=1;*/
 
-    public Employee() {
+    public EmployeeDto() {
     }
 
-    public Employee(Integer id, String firstName, String lastName, Integer age, String designation, String phoneNumber) {
+    public EmployeeDto(Integer id, String firstName, String lastName, Integer age, String designation, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.designation = designation;
         this.phoneNumber = phoneNumber;
-        //this.version = version;
     }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", designation='" + designation + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                '}';
-    }
-
 
     public Integer getId() {
         return id;
@@ -93,5 +66,17 @@ public class Employee {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeDto{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", designation='" + designation + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }
