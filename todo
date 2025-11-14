@@ -8,3 +8,31 @@ Task
  for a DB table through a REST API in the controller layer? point -- 1
   table name :: Employee
   column: -  empId(PrimaryKey) , EmpName, Age, Gender,Phone, Address, email
+
+3. Containerize Spring Boot Application with MySQL using Docker
+Create a Spring Boot application connected to a MySQL database. Then, write a Dockerfile to containerize this
+Spring Boot application. The Docker container should be able to run the app and connect to the MySQL database container
+in a Docker environment.
+
+4. Spring Boot CRUD with MongoDB for Product Collection
+Build a Spring Boot application connected to MongoDB. Implement CRUD (Create, Read, Update, Delete) operations for a
+MongoDB collection named Product, with the following fields:
+productId (Primary Key)
+productName
+productDescription
+price
+quantity
+category
+Expose these CRUD operations via a REST API in the controller layer.
+
+5. Spring Boot CRUD with Redis Cache for Session Data
+Develop a Spring Boot application integrated with Redis. Implement CRUD operations for a Redis cache named Session, with the following fields:
+sessionId (Primary Key)
+userId
+createdAt
+expiresAt
+data
+Expose these CRUD cache management operations via a REST API in the controller layer.
+
+6. Spring Boot Integration with External REST API
+Create a Spring Boot application that integrates with an external REST API (e.g., a weather API). Use RestTemplate or WebClient for HTTP communication to consume the external API and expose relevant data through your own REST API endpoint.
