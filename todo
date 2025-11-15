@@ -1,5 +1,5 @@
 Task
-1. create a simple controller class that uses a service class using autowiring and that particular class return the calculator function
+1. create a simple controller class that uses a serviCe class using autowiring and that particular class return the calculator function
  +,-,/ and * and also remember to throw the exception what the output is undefined and use loggers to log the result and the input passed.
 
  input - a = num, b= num, and operation = character
