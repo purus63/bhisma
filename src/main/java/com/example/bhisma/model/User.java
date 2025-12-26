@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
-public class Data {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,11 +20,11 @@ public class Data {
     private Integer age;
 
     // Default Constructor
-    public Data() {
+    public User() {
     }
 
     // Parameterized Constructor
-    public Data(String name, String email, Integer age) {
+    public User(String name, String email, Integer age) {
         this.name = name;
         this.email = email;
         this.age = age;

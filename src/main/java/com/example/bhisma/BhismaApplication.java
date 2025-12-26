@@ -4,6 +4,7 @@ import com.example.bhisma.model.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class BhismaApplication {
 
@@ -11,7 +12,7 @@ public class BhismaApplication {
 
 		SpringApplication.run(BhismaApplication.class, args);
 		System.out.println("the application is running perfectly fine Hurry:");
-		Data data = new Data("Joh Doe", 30);
+		Data data = new Data("Joh Doe","abc@gmail.com", 30);
 		System.out.println("Name: " + data.getName() + ", Age: " + data.getAge());
 	}
 
