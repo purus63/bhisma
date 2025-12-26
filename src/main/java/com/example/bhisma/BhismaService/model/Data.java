@@ -1,4 +1,4 @@
-package com.example.bhisma.model;
+package com.example.bhisma.BhismaService.model;
 
 import jakarta.persistence.*;
 

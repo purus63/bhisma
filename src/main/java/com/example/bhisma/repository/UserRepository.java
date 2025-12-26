@@ -1,6 +1,6 @@
 package com.example.bhisma.repository;
 
-import com.example.bhisma.model.User;
+import com.example.bhisma.BhismaService.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

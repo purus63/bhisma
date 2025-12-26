@@ -1,6 +1,6 @@
 package com.example.bhisma;
 
-import com.example.bhisma.model.Data;
+import com.example.bhisma.BhismaService.model.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

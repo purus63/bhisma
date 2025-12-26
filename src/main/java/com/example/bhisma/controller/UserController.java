@@ -2,7 +2,7 @@ package com.example.bhisma.controller;
 
 
 
-import com.example.bhisma.model.User;
+import com.example.bhisma.BhismaService.model.User;
 import com.example.bhisma.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
