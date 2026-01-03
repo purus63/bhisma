@@ -1,20 +1,17 @@
 package com.example.bhisma;
 
-import com.example.bhisma.BhismaService.model.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
+@EnableMongoRepositories
+@ComponentScan(" com.example.bhisma.repository")
 public class BhismaApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(BhismaApplication.class, args);
-		System.out.println("the application is running perfectly fine Hurry:");
-		Data data = new Data("Joh Doe","abc@gmail.com", 30);
-		System.out.println("Name: " + data.getName() + ", Age: " + data.getAge());
+		System.out.println("The application is running perfectly fine! Hurry!");
 	}
-
-
 }
